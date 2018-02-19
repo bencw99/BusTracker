@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( BusTracker )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( BusTracker BusTracker.cpp )
+target_link_libraries( BusTracker ${OpenCV_LIBS} -lopencv_tracking )
